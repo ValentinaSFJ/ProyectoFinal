@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto-final</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <nav class="navegacion">
+        <svg>
+            <rect x="45" y="5" width="60" height="35" rx="5" id="pantalla1" fill="#F0E9D2"></rect>
+                <rect x="50" y="10" width="50" height="25" rx="5" id="pantalla2" fill="#495579"></rect>
+                <polygon points="55 45 ,95 45,115 62,30 62" fill="#F0E9D2" id="primerTeclado"></polygon>
+                <polygon points="57 48 ,92 48,104 58,43 58" fill="#495579" id="segundoTeclado"></polygon>
+        </svg>
+        <ul>
+            <a class="primerItem" href="historia.html"> HISTORIA
+            </a>
+            <a class="segundoItem" href="jugemos.html"> JUGEMOS
+            </a>
+        </ul>
+    </nav>
+    <header>
+        <h1 class="tituloPrincipal"> JUGUEMOS UN POCO</h1>
+    </header>
+    <main>
+        <section>
+            body {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                margin: 0;
+              }
+              .puzzle {
+                display: flex;
+                width: 300px;
+                border: 2px solid #000;
+              }
+              .piece {
+                width: 100px;
+                height: 100px;
+                border: 1px solid #000;
+                background-color: #f0f0f0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+              }
+              .piece img {
+                max-width: 100%;
+                max-height: 100%;
+              }
+        </section>
+        <div class="puzzle">
+            <div class="piece" id="piece1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="piece" id="piece2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="piece" id="piece3" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+          </div>
+        
+          <img id="image1" src="./imagenes/Rompe1.png" alt="Imagen 1" draggable="true" ondragstart="drag(event)">
+          <img id="image2" src="./imagenes/rompe2.png" alt="Imagen 2" draggable="true" ondragstart="drag(event)">
+          <img id="image3" src="./imagenes/Rompe3.png" alt="Imagen 3" draggable="true" ondragstart="drag(event)">
+        <section>
+        </section>
+    </main>
+    <footer>
+        <img class="logoFooter" src="./imagenes/logo.png" alt="logo de abertura y cierre de etiquetas." >
+        <h3>PROGRAMACION E HISTORIA</h3>
+        <h3>Sitio con fines educativos - Creado por Valentina Rodriguez Chiappero</h3>
+    </footer>
+    <script src="./type.js"></script>
+</body>
+</html>
